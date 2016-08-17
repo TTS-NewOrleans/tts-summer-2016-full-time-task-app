@@ -2,7 +2,11 @@
 
 <h1>Tasks</h1>
 
-<%= link_to 'New User task', new_user_task_path, remote: true, class: "btn btn-sm btn-default" %>
+<%= link_to new_user_task_path, remote: true do %>
+  <button class="btn btn-sm btn-default add-task">
+    <%= fa_icon "plus" %> Add Task
+  </button>
+<% end %>
 
 <div id="task-form"></div>
 
